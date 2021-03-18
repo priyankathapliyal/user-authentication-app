@@ -17,6 +17,32 @@ router.get("/login", (req, res) => {
     res.sendFile(path.join(__dirname, '../views/login.html'));
 });
 
+/**
+ * @swagger
+ * /login:
+ *    post:
+ *      summary: Creates a new user.
+ *      consumes:
+ *        - application/json
+ *      parameters:
+ *        - in: body
+ *          name: user
+ *          description: The user to authenticate.
+ *          schema:
+ *            type: object
+ *            required:
+ *             - userName
+ *            properties:
+ *              username:
+ *                type: string
+ *              password:
+ *                type: string
+ *      responses:
+ *        201:
+ *          description: Authenticated
+ *        401:
+ *          description: Invalid username and password
+ */
 router.post('/login', login);
 
 export default router;
