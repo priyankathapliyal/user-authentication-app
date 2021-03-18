@@ -29,13 +29,14 @@ export default async function login({ body, session }: { body: any, session: any
             await validateUser(username, password);
             session.loggedin = true;
             session.username = username;
+            res.status(200);
             res.redirect("/home");
         }
         catch {
             res.status(401).send('Incorrect Username and/or Password!')
         }
     } else
-        return res.status(401).send("Please enter Username and Password!");
+        res.status(401).send("Please enter Username and Password!");
 }
 
 /**
