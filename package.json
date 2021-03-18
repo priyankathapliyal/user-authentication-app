@@ -1,0 +1,15 @@
+{
+  "name": "user-authentication-app",
+  "version": "1.0.0",
+  "description": "The application implements the login page for the user.Restful API for user authentication using node.js express framework",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Priyanka Thapliyal",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
