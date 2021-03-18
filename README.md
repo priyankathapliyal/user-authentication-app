@@ -8,6 +8,7 @@ The application implements the login page for the user.
 # Application URL
 
 https://user-authentication-nodeapp.herokuapp.com/home
+
 API documentation swagger - https://user-authentication-nodeapp.herokuapp.com/docs/
 
 # How to Run?
@@ -22,9 +23,11 @@ To run test cases for testing the rest API.
 ### Docker
 
 - Go to the root directory and run the following command to build the Docker image.
+
    ``` docker build -t priyankathapliyal/user-authentication-app . ```
 
-- To run the image that was previously built:
+- To run the image that was previously built.
+
    ```docker run -p 49160:8080 -d priyankathapliyal/user-authentication-app```
 
 - Test the application at ```http://localhost:49160/home``` on the host machine.
