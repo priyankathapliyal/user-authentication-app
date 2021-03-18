@@ -1,6 +1,6 @@
-let express =require("express");
-let bodyParser = require("body-parser");
-let router = require("./server/routes/index");
+import express from "express";
+import bodyParser from "body-parser";
+import router from "./server/routes/index";
 
 const app = express();
 
