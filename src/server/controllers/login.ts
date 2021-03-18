@@ -25,13 +25,13 @@ export default async function login({ body, session }: { body: any, session: any
     const password = body.password;
 
     if (username && password) {
-        try{
+        try {
             await validateUser(username, password);
             session.loggedin = true;
             session.username = username;
             res.redirect("/home");
         }
-        catch{
+        catch {
             res.status(401).send('Incorrect Username and/or Password!')
         }
     } else
@@ -45,7 +45,7 @@ export default async function login({ body, session }: { body: any, session: any
  * @returns a promise if username & password matches else rejects.
  */
 
-async function validateUser (username:string, password:string){
+async function validateUser(username: string, password: string) {
     if (users.filter(user => user.id === username && user.password === password).length > 0)
         return Promise.resolve(true)
     else

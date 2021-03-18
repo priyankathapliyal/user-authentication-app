@@ -9,11 +9,11 @@ router.get("/", authenticateUser, (req, res) => {
     res.redirect("/home");
 });
 
-router.get('/home',authenticateUser, (req, res) =>{
+router.get('/home', authenticateUser, (req, res) => {
     res.sendFile(path.join(__dirname, '../views/home.html'));
 });
 
-router.get("/login", (req, res) =>{
+router.get("/login", (req, res) => {
     res.sendFile(path.join(__dirname, '../views/login.html'));
 });
 

@@ -3,7 +3,7 @@
  * @param {object} 'session' object.
  */
 
-export default function authenticateUser({ session }: { session: any }, res:any, next:any) {
+export default function authenticateUser({ session }: { session: any }, res: any, next: any) {
     if (session.loggedin) {
         next();
     }
