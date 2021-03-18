@@ -19,7 +19,7 @@ const swaggerDefinition = {
 	},
 	servers: [
 		{
-			url: 'http://localhost:8080',
+			url: 'http://localhost:3000',
 			description: 'Development server',
 		},
 	],
@@ -47,7 +47,7 @@ app.use(cors())
 // initialize configuration
 dotenv.config();
 
-const port = process.env.SERVER_PORT;
+const port = process.env.PORT || 3000;
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
