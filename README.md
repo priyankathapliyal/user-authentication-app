@@ -32,6 +32,10 @@ To run test cases for testing the rest API.
 
 - Test the application at ```http://localhost:49160/home``` on the host machine.
 
+<img src="https://user-images.githubusercontent.com/21034174/111730877-522cb400-8898-11eb-9f18-b46c58584e44.png" width="250" height="150">
+
+
+
 # Improvement Scope
 
 - Authentication implementation can be further improved to invalidate sessions and logout from the application.
