@@ -32,7 +32,7 @@ To run test cases for testing the rest API.
 
 - Test the application at ```http://localhost:49160/home``` on the host machine.
 
-<img src="https://user-images.githubusercontent.com/21034174/111730877-522cb400-8898-11eb-9f18-b46c58584e44.png" width="250" height="150">
+<img src="https://user-images.githubusercontent.com/21034174/111771087-3eea0a80-88d1-11eb-8a20-167b2104927a.png" width="300" height="200">
 
 
 
@@ -42,3 +42,7 @@ To run test cases for testing the rest API.
 - Username and Passwords interactions should be via Databases and passwords should be shared via Hashing Mechanism to secure them.
 - Currently for authentication, we are storing sessions in local. But for production scenarios with multiple servers involved, we will have to move to Redis store.
 - Test cases to include more coverage.
+- Duplication of code can be reduced in Angular application.
+- Can add proper redirection for invalid routes.
+- Implemtation of test cases for UI using jasmine and karma.
+
