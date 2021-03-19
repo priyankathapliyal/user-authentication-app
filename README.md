@@ -4,12 +4,13 @@ The application implements the login page for the user.
 - Used express-session to authenticate the user
 - Used mocha-chai framework to add test cases for the backend.
 - Used swagger-ui-express to generate API documentation.
+- UI login workflow design via Angular
 
 # Application URL
 
-https://user-authentication-nodeapp.herokuapp.com/home
+https://user-authentication-node-app.herokuapp.com/
 
-API documentation swagger - https://user-authentication-nodeapp.herokuapp.com/docs/
+API documentation swagger - https://user-authentication-node-app.herokuapp.com/docs/
 
 # How to Run?
 
