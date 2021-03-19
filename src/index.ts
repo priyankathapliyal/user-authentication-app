@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 import cors from "cors"
+import path from 'path';
 
 const swaggerDefinition = {
 	openapi: '3.0.0',
@@ -54,6 +55,8 @@ app.use(bodyParser.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use('/', express.static(path.join(__dirname, '../public/ng-user-authentication')));
 
 app.use("/", router)
 

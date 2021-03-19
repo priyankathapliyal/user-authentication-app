@@ -8,6 +8,6 @@ export default function authenticateUser({ session }: { session: any }, res: any
         next();
     }
     else {
-        res.redirect('/login');
+        res.status(401).send({ status: 401, message: "User not authenticated." });
     }
 }
