@@ -18,34 +18,39 @@ describe("POST /login", () => {
         expect(res).to.have.cookie('connect.sid');
     });
 
-    it("Should return status 401 and message `Incorrect Username and/or Password!` as username and password is wrong", async () => {
+    it("Should return status 404 and message `Incorrect Username or Password!` as username and password is wrong", async () => {
         let res = await chai
             .request(app)
             .post('/login')
             .send({ username: "john", password: "passwordmary" })
 
-        expect(res.status).to.equal(401);
-        expect(res.error.text).to.equal('Incorrect Username and/or Password!')
+        
+        const error= JSON.parse(res.error.text);
+        expect(res.status).to.equal(404);
+        expect(error.message).to.equal('Incorrect Username or Password!')
     })
 
-    it("Should return status 401 and message `Incorrect Username and/or Password!` as username is not specified", async () => {
+    it("Should return status 404 and message `Incorrect Username or Password!` as username is not specified", async () => {
         let res = await chai
             .request(app)
             .post('/login')
             .send({ password: "passwordmary" })
 
-        expect(res.status).to.equal(401);
-        expect(res.error.text).to.equal('Please enter Username and Password!')
+        
+        const error= JSON.parse(res.error.text);
+        expect(res.status).to.equal(404);
+        expect(error.message).to.equal('Please enter Username and Password!')
     })
 
-    it("Should return status 401 and message `Incorrect Username and/or Password!` as password is not specified", async () => {
+    it("Should return status 404 and message `Incorrect Username or Password!` as password is not specified", async () => {
         let res = await chai
             .request(app)
             .post('/login')
             .send({ username: "mary" })
 
-        expect(res.status).to.equal(401);
-        expect(res.error.text).to.equal('Please enter Username and Password!')
+        const error= JSON.parse(res.error.text);
+        expect(res.status).to.equal(404);
+        expect(error.message).to.equal('Please enter Username and Password!')
     })
 
 });

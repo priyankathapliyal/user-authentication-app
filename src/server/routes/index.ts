@@ -40,7 +40,7 @@ router.get("/login", (req, res) => {
  *      responses:
  *        201:
  *          description: Authenticated
- *        401:
+ *        404:
  *          description: Invalid username and password
  */
 router.post('/login', login);
